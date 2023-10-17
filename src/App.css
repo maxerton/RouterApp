@@ -1,38 +1,162 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container {
+  max-width: 800px;
+  width: 90%;
+  margin: 0 auto;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.header {
+  background-color: #323139;
+  color: azure;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  justify-content: space-between;
+}
+
+/* Общий контейнер меню */
+.menu {
+  padding: 10px;
+  background-color: #333; /* Добавим фоновый цвет */
+  text-align: center; /* Центрируем содержимое горизонтально */
+}
+
+/* Список элементов меню */
+.menu-list {
+  list-style-type: none;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  padding: 0; /* Убираем внутренние отступы у списка */
+  margin: 0; /* Убираем внешние отступы у списка */
+}
+
+/* Оформление пунктов меню */
+.menu-item {
+  padding: 10px;
+  background-color: #4d3082;
+  margin: 0 10px; /* Добавим небольшие отступы между пунктами */
+  border-radius: 5px; /* Закруглим углы пунктов */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Плавное изменение цвета фона и текста */
+}
+
+/* Ссылки внутри пунктов меню */
+.menu-item a {
+  color: azure;
+  text-decoration: none; /* Убираем подчеркивание ссылок */
+}
+
+/* Оформление активной ссылки */
+.menu-item a.active {
+  color: rgb(78, 242, 37);
+  font-weight: bold; /* Выделение активной ссылки жирным шрифтом */
+}
+
+/* Эффект при наведении на пункт меню */
+.menu-item:hover {
+  background-color: #6633a0;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.menu-item__link {
+  border-color: white;
+  box-shadow: 0 0 9px black;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.main {
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 3px solid gray;
+}
+
+.post {
+  padding: 10px;
+  border: 1px solid silver;
+  margin-bottom: 5px;
+  transition: all 200ms;
+  display: block;
+  text-decoration: none;
+  color: #323139;
+}
+
+
+.post:hover {
+  cursor: pointer;
+  border: 2px solid darkgray;
+  transform: scale(1.05);
+}
+
+/* Стилизуем кнопку */
+button {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #4CAF50; /* Цвет фона */
+  color: #fff; /* Цвет текста */
+  border: none; /* Убираем границу */
+  border-radius: 5px; /* Закругляем углы */
+  cursor: pointer; /* Задаем курсор в виде руки при наведении */
+  transition: background-color 0.3s ease; /* Плавное изменение цвета фона */
+}
+
+/* Изменяем цвет фона при наведении */
+button:hover {
+  background-color: #45a049;
+}
+
+/* Изменяем цвет фона при активации (клике) */
+button:active {
+  background-color: #388e3c;
+}
+
+
+/* Стилизация контейнера поста */
+.post-r {
+  margin: 5px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #fff;
+}
+
+/* Стилизация заголовка поста */
+.post-title {
+  font-size: 24px;
+  color: #333;
+  margin: 0;
+}
+
+/* Стилизация контейнера для содержания поста */
+.post-content {
+  margin-top: 20px;
+}
+
+/* Стилизация заголовка содержания поста */
+.post-heading {
+  font-size: 20px;
+  color: #333;
+  margin: 0;
+}
+
+/* Стилизация текста содержания поста */
+.post-body {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.5;
+}
+
+.btn-link,
+.btn-login {
+  display: inline-block;
+  padding: 10px;
+  margin-bottom: 10px;
+  text-decoration: none;
+  border: 1px solid green;
+}
+
+.btn-login {
+  border-color: blue;
+  color: blue;
 }

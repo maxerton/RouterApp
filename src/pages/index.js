@@ -1,0 +1,7 @@
+export * from './Home'
+export * from './Blog'
+export * from './About/About'
+export * from './NotFound'
+export * from './Single'
+export * from './CreatePost'
+export * from './Login'
